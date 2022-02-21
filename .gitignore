@@ -384,7 +384,7 @@ results/
 data*/
 cairo*/
 drawings/
-*.sh
+
 RESULT/
 gaussian*
 uniform*
