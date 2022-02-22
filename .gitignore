@@ -383,9 +383,4 @@ cairo*/
 drawings/
 
 RESULT/
-gaussian*
-uniform*
-square/*
-rectangle/*
-/prac/*
 build_win/
