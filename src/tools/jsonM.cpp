@@ -84,7 +84,7 @@ void jsonM::debug() {
 }
 void jsonM::output(const char* outfolder, const char* appendix, const char* outFile) {
 	std::ofstream ofs;
-	std::string s = std::string(outfolder) + "/RESULT/" + outFile;
+	std::string s = std::string(outfolder) + "/" + outFile;
 	//outFile = "/home1/guangping/dynaMIS/RESULT/"+outFile;
 	s += appendix;
 	try {
