@@ -58,24 +58,6 @@ void solver_line<T, C>::print() {
 	}
 
 };
-template<typename T, typename C>
-void solver_line<T, C>::draw(cairo_t* cr) {
-	set_solution();
-	cairo_set_source_rgb(cr, 0.0, 1.0, 1.0);
-	// draw lines
-	double x, y;
-	double end_x = width * 1.1;
-	double	end_y = height * 1.1;
-	cairo_set_source_rgb(cr, 1.0, 0.0, 0.0);
-	for (int i = 0; i < numberH; i++) {
-		cairo_stroke(cr);
-		y = end_y - i * label_height;
-		cairo_move_to(cr, 0.1 * width, y);
-		cairo_line_to(cr, end_x, y);
-		cairo_stroke(cr);
-	}
-	Solver::draw(cr);
-};
 #endif
 //xPRINT---------------PRINT-------------------------
 

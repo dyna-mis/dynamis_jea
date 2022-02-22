@@ -249,11 +249,6 @@ void Line_greedy::print() {
 	Line::print();
 
 };
-void Line_greedy::draw(cairo_t* cr) {
-	set_solution();
-	Line::draw(cr);
-
-};
 #endif
 //xPRINT---------------PRINT-------------------------
 

@@ -114,30 +114,6 @@ void solver_grid<T>::print(){
 
 	std::cout << "markE:" << markE << std::endl;
 };
-template<typename T>
-void solver_grid<T>::draw(cairo_t* cr) {
-	Solver::draw(cr);
-	cairo_set_source_rgb(cr, 0.0, 1.0, 1.0);
-	// draw lines
-	double x, y;
-	double end_x = width * 1.1;
-	double	end_y = height * 1.1;
-	for (int i = 0; i < numberV; i++) {
-		cairo_stroke(cr);
-		x = i * label_width + 0.1 * width;
-		cairo_move_to(cr, x, 0.1 * height);
-		cairo_line_to(cr, x, end_y);
-		cairo_stroke(cr);
-	}
-	cairo_set_source_rgb(cr, 1.0, 0.0, 0.0);
-	for (int i = 0; i < numberH; i++) {
-		cairo_stroke(cr);
-		y = end_y - i * label_height;
-		cairo_move_to(cr, 0.1 * width, y);
-		cairo_line_to(cr, end_x, y);
-		cairo_stroke(cr);
-	};
-};
 #endif
 //xPRINT---------------PRINT-------------------------
 

@@ -287,12 +287,6 @@ void Grid_k::print() {
 
 
 };
-void Grid_k::draw(cairo_t* cr) {
-	set_solution();
-	solver_grid<std::set<Point_2>>::draw(cr);
-
-
-};
 #endif
 //xPRINT---------------PRINT-------------------------
 

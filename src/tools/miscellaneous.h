@@ -22,14 +22,6 @@
 #include "label_point.h"
 #include "cxxopts.hpp"
 #include "interval.h"
- //xPRINT+++++++++++++++PRINT+++++++++++++++++++++++++
-#ifdef DYNAMIS_PRINT
-#include <cairo/cairo.h>
-#include <cairo/cairo-pdf.h>
-extern  cairo_surface_t* surface;
-extern  cairo_t* cr;
-#endif
-//xPRINT---------------PRINT-------------------------
 
 //the following are UBUNTU/LINUX, and MacOS ONLY terminal color codes.
 #define RESET   "\033[0m"
@@ -65,14 +57,13 @@ struct cmp_tol {
 };
 
 
-extern  cairo_surface_t* surface;
-extern  cairo_t *cr;
 extern string modType;
 extern string algoType;
 extern string file;
 extern double changeRatio;
 extern string result_folder;
 extern string tmp_dictionary;
+extern string maxHS_PATH;
 extern jsonM measures;
 extern int param_k;
 
@@ -218,14 +209,6 @@ void print_point(const label_point& point);
 void print_point(const interval& interval);
 #endif
 
-#if defined DYNAMIS_PRINT
-void drawPoint(double x, double y, cairo_t* cr);
-
-void startDrawing(double width, double height, const char* fileName);
-void finishDrawing();
-void drawRect(double x, double y, bool inSolution, bool greedy, cairo_t* cr, double width, double height);
-void drawSqure(double x, double y, bool inSolution, bool greedy, cairo_t* cr, double sigma);
-#endif
 //xPRINT---------------PRINT-------------------------
 
 

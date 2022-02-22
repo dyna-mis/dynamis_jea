@@ -141,10 +141,6 @@ void Grid::print() {
 	set_solution();
 	solver_grid::print();
 } 
-void Grid::draw(cairo_t* cr) {
-	set_solution();
-	solver_grid::draw(cr);
-};
 
 #endif
 //xPRINT---------------PRINT-------------------------

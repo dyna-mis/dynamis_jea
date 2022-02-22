@@ -199,12 +199,6 @@ void Line::print() {
 
 
 };
-void Line::draw(cairo_t* cr) {
-	set_solution();
-	solver_line<Point_2, std::set<Point_2>>::draw(cr);
-
-
-};
 #endif
 //xPRINT---------------PRINT-------------------------
 

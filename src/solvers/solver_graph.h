@@ -19,8 +19,6 @@ public:
 #ifdef DYNAMIS_PRINT
 	void print() override;
 	void print_rect() override;
-	void draw(cairo_t* cr) override;
-	void draw_rect(cairo_t* cr) override;
 #endif
 	//xPRINT---------------PRINT-------------------------
 

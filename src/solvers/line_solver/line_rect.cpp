@@ -219,14 +219,6 @@ void Line_rect::print() {
 	solver_line<interval, std::set<interval, lexico_Interval>>::print();
 
 };
-void Line_rect::draw(cairo_t* cr) {
-	set_solution();
-	solver_line<interval, std::set<interval, lexico_Interval>>::draw(cr);
-
-
-
-
-};
 #endif
 //xPRINT---------------PRINT-------------------------
 

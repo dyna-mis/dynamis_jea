@@ -66,11 +66,11 @@ else ()
 endif()
 
 
-if (WIN32)
-	find_package(unofficial-cairo CONFIG REQUIRED)
-	set (cairo_lib unofficial::cairo::cairo)
-	target_link_libraries(dynaMIS PRIVATE ${cairo_lib})
-endif()
+# if (WIN32)
+	# find_package(unofficial-cairo CONFIG REQUIRED)
+	# set (cairo_lib unofficial::cairo::cairo)
+	# target_link_libraries(dynaMIS PRIVATE ${cairo_lib})
+# endif()
 
 
 

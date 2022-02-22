@@ -1,5 +1,4 @@
 #include "wmis_solver.h"
-std::string maxHS_PATH = "/home1/guangping/mis_solvers/maxhs ";
 
 
 

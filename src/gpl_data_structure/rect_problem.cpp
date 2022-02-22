@@ -113,19 +113,6 @@ int rect_problem::look_up(const label_point& Point) const {
 #ifdef DYNAMIS_PRINT
 
 
-void rect_problem::draw(cairo_t* cr) {
-	double x, y;
-	int i = 0;
-	for (const auto& e : pVector) {
-		x = e.x() + 0.1 * width;
-		y = 1.1 * height - e.y();
-		cairo_move_to(cr, x, y);
-		cairo_show_text(cr, std::to_string(i).c_str());
-		cairo_move_to(cr, x, y);
-		drawPoint(x, y, cr);
-		i++;
-	}
-}
 
 void rect_problem::print() {
 	//	double sigma;

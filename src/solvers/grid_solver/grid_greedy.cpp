@@ -772,10 +772,6 @@ void Grid_greedy::print() {
 
 
 };
-void Grid_greedy::draw(cairo_t* cr) {
-	set_solution();
-	Grid::draw(cr);
-};
 #endif
 //xPRINT---------------PRINT-------------------------
 

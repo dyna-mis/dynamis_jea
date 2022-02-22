@@ -12,12 +12,7 @@ double epsilon = 0.0000001;
 
 std::set<double, ::cmp_tol> points_x;
 std::set<double, ::cmp_tol> points_y;
-//xPRINT+++++++++++++++PRINT+++++++++++++++++++++++++
-#ifdef DYNAMIS_PRINT
-cairo_surface_t* surface;
-cairo_t* cr;
-#endif
-//xPRINT---------------PRINT-------------------------
+
 // search a square region with point as center and width as ratio (half width)
 void rangeSearch_neighbor(PointSet_CGAL& pSet, const Point_2& point,std::list<Vertex_handle>& LV){
 	double center_x =point.x();
@@ -240,6 +235,7 @@ string file;
 double changeRatio;
 string result_folder;
 string tmp_dictionary;
+string maxHS_PATH;
 int param_k;
 unsigned seed;
 bool greedy_v = false;
@@ -263,6 +259,7 @@ void parseInitOptions(int argc, char* argv[]) {
 		("f,filename", "input file", cxxopts::value<std::string>())
 		("d", "dictionary", cxxopts::value<std::string>()->default_value("D:/GIT/C++/dynaMIS"))
 		("t", "tmp_dictionary", cxxopts::value<std::string>()->default_value("D:/GIT/C++/dynaMIS"))
+		("e", "exact_dictionary", cxxopts::value<std::string>()->default_value("../maxhs "))
 		("s", "seed", cxxopts::value<unsigned>()->default_value("0"))
 		("c,recomputation", "static version")
 		;
@@ -308,6 +305,8 @@ void parseInitOptions(int argc, char* argv[]) {
 	}
 	result_folder = result["d"].as<std::string>();
 	tmp_dictionary = result["t"].as<std::string>();
+	maxHS_PATH = result["e"].as<std::string>();
+
 	seed = result["s"].as<unsigned>();
 
 	param_k = result["k"].as<size_t>();
@@ -400,47 +399,7 @@ void outputMeasure(const char* append) {
 	measures.output(result_folder.c_str(), appendix.c_str(), outFile.c_str());
 }
 
-//xPRINT+++++++++++++++PRINT+++++++++++++++++++++++++
-#if defined DYNAMIS_PRINT
 
-void startDrawing(double width, double height, const char* fileName) {
-	surface = cairo_pdf_surface_create(fileName, width * 1.2, height * 1.2);
-	cr = cairo_create(surface);
-	cairo_select_font_face(cr, "serif", CAIRO_FONT_SLANT_NORMAL, CAIRO_FONT_WEIGHT_BOLD);
-	cairo_set_font_size(cr, 10.0);
-	cairo_set_source_rgb(cr, 0.0, 0.0, 1.0);
-	cairo_set_line_width(cr, 2.5);
-	cairo_rectangle(cr, width * 0.1, height * 0.1, width, height);
-	cairo_stroke(cr);
-}
-void finishDrawing() {
-	cairo_destroy(cr);
-	cairo_surface_destroy(surface);
-}
-
-
-// draw the a squre of width sigma and center （x,y）
-void drawSqure(double x, double y, bool inSolution, bool greedy, cairo_t* cr, double sigma) {
-	if (inSolution) cairo_set_source_rgb(cr, 0.0, 1.0, 0.0);
-	if (greedy) cairo_set_source_rgb(cr, 0.0, 0.0, 1.0);
-	cairo_rectangle(cr, x - sigma / 2, y - sigma / 2, sigma, sigma);
-	cairo_stroke(cr);
-	cairo_set_source_rgb(cr, 1.0, 0.0, 0.0);
-}
-
-void drawRect(double x, double y, bool inSolution, bool greedy, cairo_t* cr, double width, double height) {
-	if (inSolution) cairo_set_source_rgb(cr, 0.0, 1.0, 0.0);
-	if (greedy) cairo_set_source_rgb(cr, 0.0, 0.0, 1.0);
-	cairo_rectangle(cr, x - width / 2, y - height / 2, width, height);
-	cairo_stroke(cr);
-	cairo_set_source_rgb(cr, 1.0, 0.0, 0.0);
-}
-void drawPoint(double x, double y, cairo_t* cr) {
-	cairo_arc(cr, x, y, 1, 0, 2 * M_PI);
-	cairo_stroke_preserve(cr);
-	cairo_fill(cr);
-}
-#endif
 
 #if defined DYNAMIS_PRINT || defined DYNAMIS_DEBUG 
 

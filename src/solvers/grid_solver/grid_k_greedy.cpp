@@ -595,12 +595,6 @@ void Grid_k_greedy::print() {
 
 
 };
-void Grid_k_greedy::draw(cairo_t* cr) {
-	set_solution();
-	Grid_k::draw(cr);
-
-
-};
 #endif
 //xPRINT---------------PRINT-------------------------
 

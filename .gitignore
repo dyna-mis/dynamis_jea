@@ -375,7 +375,6 @@ MigrationBackup/
 FodyWeavers.xsd
 
 
-build/
 out/
 tests/
 results/
@@ -392,3 +391,4 @@ square/*
 rectangle/*
 /prac/*
 output/
+build_win/

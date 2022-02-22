@@ -96,33 +96,6 @@ void Solver::print_rect() {
 }
 
 
-void Solver::draw(cairo_t* cr) {
-	double x, y;
-	int i = 0;
-	for (auto e : problem_ref->pVector) {
-		x = e.x() + 0.1 * width;
-		y = 1.1 * height - e.y();
-		if (mVector[i] == 1) {
-			drawRect(x, y, true, false, cr, label_width, label_height);
-		}
-		else drawRect(x, y, false, false, cr, label_width, label_height);
-		i++;
-	}
-};
-void Solver::draw_rect(cairo_t* cr) {
-	double x, y;
-	int i = 0;
-	for (const auto& e : rect_problem_ref->pVector) {
-		x = e.x() + 0.1 * width;
-		y = 1.1 * height - e.y();
-		if (mVector[i] == 1) {
-			drawRect(x, y, true, false, cr, e.width_single, label_height);
-		}
-		else drawRect(x, y, false, false, cr, e.width_single, label_height);
-		i++;
-	}
-
-};
 
 #endif
 //xPRINT---------------PRINT-------------------------

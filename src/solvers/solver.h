@@ -54,8 +54,6 @@ public:
 
 	//xPRINT+++++++++++++++PRINT+++++++++++++++++++++++++
 #ifdef DYNAMIS_PRINT
-	virtual void draw(cairo_t* cr);
-	virtual void draw_rect(cairo_t* cr);
 	virtual void print();
 	virtual void print_rect();
 #endif

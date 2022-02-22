@@ -120,49 +120,6 @@ void solver_graph::print_rect()
 	conflict_graph.print();
 }
 
-void solver_graph::draw(cairo_t* cr) {
-	solver_ors::draw(cr);
-	cairo_set_source_rgb(cr, 1.0, 0.0, 0.0);
-	double u_x, u_y;
-	double v_x, v_y;
-	for (unsigned u_index = 0; u_index < problem_ref->pVector.size(); u_index++) {
-		u_x = problem_ref->pVector[u_index].x() + 0.1 * width;
-		u_y = 1.1 * height - problem_ref->pVector[u_index].y();
-		for (unsigned v_index = 0; v_index < problem_ref->pVector.size(); v_index++) {
-			if (!conflict_graph.containEdge(u_index, v_index)) continue;
-			v_x = problem_ref->pVector[v_index].x() + 0.1 * width;
-			v_y = 1.1 * height - problem_ref->pVector[v_index].y();
-			cairo_move_to(cr, u_x, u_y);
-			cairo_line_to(cr, v_x, v_y);
-			cairo_stroke(cr);
-		}
-
-	}
-	cairo_set_source_rgb(cr, 0.0, 0.0, 1.0);
-}
-
-void solver_graph::draw_rect(cairo_t* cr) {
-	solver_ors::draw_rect(cr);
-	cairo_set_source_rgb(cr, 1.0, 0.0, 0.0);
-	double u_x, u_y;
-	double v_x, v_y;
-	for (unsigned u_index = 0; u_index < rect_problem_ref->pVector.size(); u_index++) {
-		u_x = rect_problem_ref->pVector[u_index].x() + 0.1 * width;
-		u_y = 1.1 * height - rect_problem_ref->pVector[u_index].y();
-		for (unsigned v_index = 0; v_index < rect_problem_ref->pVector.size(); v_index++) {
-			if (!conflict_graph.containEdge(u_index, v_index)) continue;
-			v_x = rect_problem_ref->pVector[v_index].x() + 0.1 * width;
-			v_y = 1.1 * height - rect_problem_ref->pVector[v_index].y();
-			cairo_move_to(cr, u_x, u_y);
-			cairo_line_to(cr, v_x, v_y);
-			cairo_stroke(cr);
-		}
-
-	}
-	cairo_set_source_rgb(cr, 0.0, 0.0, 1.0);
-}
-
-
 #endif
 //xPRINT---------------PRINT-------------------------
 

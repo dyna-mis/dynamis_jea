@@ -20,7 +20,6 @@ public:
 	//xPRINT+++++++++++++++PRINT+++++++++++++++++++++++++
 #ifdef DYNAMIS_PRINT
 	void print() override;
-	void draw(cairo_t* cr) override;
 #endif
 	//xPRINT---------------PRINT-------------------------
 
