@@ -26,7 +26,7 @@ for problem in INPUT/square/*;
                 		do
                         	for m in "${mod[@]}";
                         		do			
-					qsub -N "${a}_${m}_${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_square.sh $file $a $m 0.04     
+					qsub -N "${a}_${m}_${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_square.sh $file $a $m 0.04 ./OUTPUT/E1    
 					done
                         	done
 			fi
@@ -45,7 +45,7 @@ for problem in INPUT/rectangle/*;
                                 do
                                 for m in "${mod[@]}";
                                         do
-                                        qsub -N "${a}-${m}-${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_rectangle.sh $file $a $m 0.04
+                                        qsub -N "${a}-${m}-${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_rectangle.sh $file $a $m 0.04 ./OUTPUT/E1_Rect
                                         done
                                 done
                 	fi
@@ -61,7 +61,7 @@ for file in INPUT/square/prac/*;
                 do
                         for a in "${algoE[@]}";
                                         do
-                                        qsub -N "${a}_${m}_${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_square.sh $file $a mix 0.1
+                                        qsub -N "${a}_${m}_${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_square.sh $file $a mix 0.1 ./OUTPUT/E23
                                         done
                 done
 
@@ -70,7 +70,7 @@ for file in INPUT/rectangle/prac/*;
                 do
                         for a in "${algoRE[@]}";
                                         do
-                                        qsub -N "${a}_${m}_${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_rectangle.sh $file $a mix 0.1
+                                        qsub -N "${a}_${m}_${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_rectangle.sh $file $a mix 0.1 ./OUTPUT/E23_Rect
                                         done
                 done
 
@@ -87,7 +87,7 @@ for file in INPUT/square/sin1000/*;
                                 do
                                 for m in "${mod[@]}";
                                         do
-                                        qsub -N "${a}_${m}_${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_square.sh $file $a $m 0.1
+                                        qsub -N "${a}_${m}_${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_square.sh $file $a $m 0.1 ./OUTPUT/E4
                                         done
                                 done
                         fi
@@ -102,7 +102,7 @@ for file in INPUT/rectangle/sin1000/*;
                                 do
                                 for m in "${mod[@]}";
                                         do
-                                        qsub -N "${a}-${m}-${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_rectangle.sh $file $a $m 0.1
+                                        qsub -N "${a}-${m}-${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_rectangle.sh $file $a $m 0.1 ./OUTPUT/E4_Rect
                                         done
                                 done
                         fi
@@ -121,8 +121,8 @@ for problem in INPUT/square/*;
                                 do
                                 for m in "${mod[@]}";
                                         do
-					qsub -N "${a}_${m}_${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_square_recompute.sh $file $a $m 0.1
-                                        qsub -N "${a}_${m}_${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_square.sh $file $a $m 0.1
+					qsub -N "${a}_${m}_${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_square_recompute.sh $file $a $m 0.1 ./OUTPUT/E5
+                                        qsub -N "${a}_${m}_${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_square.sh $file $a $m 0.1 ./OUTPUT/E5
                                         done
                                 done
 
@@ -137,8 +137,8 @@ for problem in INPUT/rectangle/*;
                                 do
                                 for m in "${mod[@]}";
                                         do
-					qsub -N "${a}-${m}-${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_rectangle_recompute.sh $file $a $m 0.1
-                                        qsub -N "${a}-${m}-${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_rectangle.sh $file $a $m 0.1
+					qsub -N "${a}-${m}-${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_rectangle_recompute.sh $file $a $m 0.1 ./E5_Rect
+                                        qsub -N "${a}-${m}-${file##*/}" -l bc4 -l h_rt=00:30:00 -r y ./dynamis_1_rectangle.sh $file $a $m 0.1 ./E5_Rect
                                         done
                                 done
                 done
