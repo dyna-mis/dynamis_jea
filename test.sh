@@ -16,7 +16,7 @@ declare -a parK=("2,4")
 
 #E1* 10000 400
 #  E1
-for problem in INPUT/square/*;
+for problem in INPUT_1/square/*;
 	do
         for file in $problem/*;
 		do
@@ -35,7 +35,7 @@ for problem in INPUT/square/*;
 	done
 
 # E1-Rect
-for problem in INPUT/rectangle/*;
+for problem in INPUT_1/rectangle/*;
         do
         for file in $problem/*;
 		do
