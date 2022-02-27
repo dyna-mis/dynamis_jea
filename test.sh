@@ -137,8 +137,8 @@ for problem in INPUT/rectangle/*;
                                 do
                                 for m in "${mod[@]}";
                                         do
-										./dynamis_1_rectangle_recompute.sh $file $a $m 0.1 ./E5_Rect
-                                        ./dynamis_1_rectangle.sh $file $a $m 0.1 ./E5_Rect
+										./dynamis_1_rectangle_recompute.sh $file $a $m 0.1 ./OUTPUT/E5_Rect
+                                        ./dynamis_1_rectangle.sh $file $a $m 0.1 ./OUTPUT/E5_Rect
                                         done
                                 done
                 done
