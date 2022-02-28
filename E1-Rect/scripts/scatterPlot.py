@@ -95,7 +95,6 @@ class scatter_DATA:
 def getScatter_UPDATE_SIZE(folderName,mod, model, skipName,outPutName):
     x = DATA.folderList(folderName,mod, model,skipName)
     scatter_date =scatter_json(x,'updateFullTime_milisecond','updateSize','runtime[ms]','solution size |A|')
-    print(scatter_date)
     xmin = 0.00008
     xmax = 12
     #ymin = 450
