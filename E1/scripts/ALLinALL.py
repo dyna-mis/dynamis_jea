@@ -1,15 +1,5 @@
 import scatterPlot
-import DATA
-import collections
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
-from collections import OrderedDict
-import copy
-
 from pathlib import Path
-from pprint import pprint
 import os
 
 
