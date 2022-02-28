@@ -22,7 +22,7 @@ for mod in ['add', 'sub']:
             dirname = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
             result_path = Path(dirname + "\\" + '\dynamis_jea\OUTPUT\E4_Rect')
             assert result_path.is_dir()
-            outPutName = os.path.dirname(os.path.dirname(__file__)) + '\plots'+"\\"+mod+'-'+model+'-'+'rectangle'
+            outPutName = os.path.join(os.path.dirname(os.path.dirname(__file__)), mod+'-'+model+'-'+'rectangle')
             scatterPlot.getScatter_UPDATE_RATIO(result_path, model, mod,'no',outPutName)
 
 
