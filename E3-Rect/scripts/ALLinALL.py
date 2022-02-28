@@ -18,10 +18,10 @@ for mod in ['add','sub']:
 '''
 for mod in ['mix']:
   for model in ['hamlets', 'peaks']:
-        dirname = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
-        result_path = Path(dirname + "\\" + '\dynamis_jea\OUTPUT\E23_Rect')
+        dirname = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))))
+        result_path = Path(os.path.join(dirname, "dynamis_jea", "OUTPUT", "E23_Rect"))
         assert result_path.is_dir()
-        outPutName = os.path.dirname(os.path.dirname(__file__)) + '\plots' + "\\"+mod+'-'+model+'-'+str(10000)+'-'+'rectangle'
+        outPutName = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'plots',mod+'-'+model+'-'+str(10000)+'-'+'rectangle')
         scatterPlot.getScatter_UPDATE_SIZE(result_path, mod, model,'no',outPutName)
 
 

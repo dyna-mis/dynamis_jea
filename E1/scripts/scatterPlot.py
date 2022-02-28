@@ -70,7 +70,7 @@ def draw_scatter(df,x_axis_name,y_axis_name,name, x_min, x_max, y_min, y_max):
     sns_plot.savefig(name+".pdf")
     plt.figure()
     ax.get_legend().set_visible(True)
-    export_legend(leg)
+    #export_legend(leg)
 
 
 def scatter_json(scatter_list,x_data_name, y_data_name, x_axis_name, y_axis_name):
