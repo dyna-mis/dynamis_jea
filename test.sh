@@ -13,7 +13,7 @@ declare -a algoRE=("wmis" "graph" "line")
 
 declare -a mod=("add" "sub") 
 declare -a parK=("2,4")
-
+: '
 #E1* 10000 400
 #  E1
 for problem in INPUT/INPUT_1/square/*;
@@ -35,7 +35,7 @@ for problem in INPUT/INPUT_1/square/*;
 	done
 
 # E1-Rect
-for problem in INPUT/INPUT_1/rectangle/*;
+for problem in INPUT/rectangle/*;
         do
         for file in $problem/*;
 		do
@@ -52,8 +52,6 @@ for problem in INPUT/INPUT_1/rectangle/*;
 		done
 
        done
-
-
 
 #E2*, E3* prac
 # E2, E3
@@ -128,6 +126,7 @@ for problem in INPUT/square/*;
 
                 done
         done
+'
 # E5-Rect
 for problem in INPUT/rectangle/*;
         do
