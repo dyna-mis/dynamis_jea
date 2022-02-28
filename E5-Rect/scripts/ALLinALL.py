@@ -18,7 +18,7 @@ ymax= 0
 for mod in ['add', 'sub']:
     for model in ['uniform', 'gaussian']:
         dirname = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))))
-        result_path = Path(os.path.join(dirname, "dynamis_jea", "OUTPUT", "E5_Rect"))
+        result_path = Path(os.path.join(dirname, "dynamis_jea", "OUTPUT", "E5-Rect"))
         outPutName = os.path.join(os.path.dirname(os.path.dirname(__file__)), mod + '-' + model + '-' + 'update' + '-' + 'rectangle')
         if mod == "add" and model == "uniform":
             ymin = 0.0008

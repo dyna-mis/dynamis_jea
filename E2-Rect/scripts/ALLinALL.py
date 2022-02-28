@@ -20,7 +20,7 @@ instance_list = ["post_office_box",
 for instance in instance_list:
         for mod in ['mix']:
             dirname = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))))
-            result_path = Path(os.path.join(dirname, "dynamis_jea", "OUTPUT", "E23_Rect"))
+            result_path = Path(os.path.join(dirname, "dynamis_jea", "OUTPUT", "E23-Rect"))
             assert result_path.is_dir()
             outPutName = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'plots', mod+'-'+instance+'-'+'rectangle')
             scatterPlot.getScatter_UPDATE_RATIO(result_path, instance, mod,'no',outPutName)
