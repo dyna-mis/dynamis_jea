@@ -19,7 +19,7 @@ instance_list = ["post_office_box",
 
 for mod in ['add', 'sub']:
   for model in ['uniform', 'gaussian']:
-            dirname = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+            dirname = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))))
             result_path = Path(os.path.join(dirname, "dynamis_jea", "OUTPUT", "E4_Rect"))
             assert result_path.is_dir()
             outPutName = os.path.join(os.path.dirname(os.path.dirname(__file__)), mod+'-'+model+'-'+'rectangle')
