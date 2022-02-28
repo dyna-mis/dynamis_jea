@@ -97,7 +97,7 @@ def draw_Runtimes(result,name):
              #  bbox_to_anchor=(1, 1), loc='bottom', borderaxespad=0.)
      plt.savefig(name+".pdf", bbox_inches = "tight")
      plt.figure()
-     export_legend(leg)
+     #export_legend(leg)
 def draw_Runtime_recompute(result,name):
      sns.set(style="darkgrid",rc={"lines.linewidth": 2.5})
      fig = plt.figure()
@@ -134,6 +134,6 @@ def draw_Runtime_recompute(result,name):
      leg_lines[3].set_linestyle(":")
      leg_lines[5].set_linestyle(":")
      leg_lines[7].set_linestyle(":")
-     export_legend(leg)
+     #export_legend(leg)
     
     

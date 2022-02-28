@@ -19,7 +19,7 @@ for mod in ['add', 'sub']:
     for model in ['uniform', 'gaussian']:
         dirname = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))))
         result_path = Path(os.path.join(dirname, "dynamis_jea", "OUTPUT", "E5_Rect"))
-        outPutName = os.path.join(os.path.dirname(os.path.dirname(__file__)), mod + '-' + model + '-' + 'update' + '-' + 'rectangle')
+        outPutName = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'plots', mod + '-' + model + '-' + 'update' + '-' + 'rectangle')
         if mod == "add" and model == "uniform":
             ymin = 0.0008
             ymax = 5
@@ -51,5 +51,5 @@ for mod in ['add', 'sub']:
         if mod == "sub" and model == "gaussian":
             ymin = 0.008
             ymax = 50
-        outPutName = os.path.join(os.path.dirname(os.path.dirname(__file__)), mod + '-' + model + '-' + 'recompute' + '-' + 'rectangle')
+        outPutName = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'plots',  mod + '-' + model + '-' + 'recompute' + '-' + 'rectangle')
         linePlot.getLine_Runtime_recompute(result_path, mod, model, 'rect', outPutName, ymin, ymax)
