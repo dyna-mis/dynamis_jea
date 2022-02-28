@@ -26,5 +26,3 @@ for instance in instance_list:
             assert result_path.is_dir()
             outPutName = Path(os.path.join(os.path.dirname(os.path.dirname(__file__)) ,'plots' ,mod,'-',instance, '-','square'))
             scatterPlot.getScatter_UPDATE_RATIO(result_path, instance, mod,'no',outPutName)
-
-
