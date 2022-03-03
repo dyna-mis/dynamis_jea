@@ -49,7 +49,8 @@ evaluation_project (root directory of the evaluation)
 </ol>
 
 ## Compilation
-Compile the source with the build/build_auto.sh
+Compile the source with the build/build_auto.sh 
+
 intall the maxhs solver and move the generated binary file maxhs under the root directory of this evaluation (see the file structure above)
 
 
@@ -57,6 +58,8 @@ intall the maxhs solver and move the generated binary file maxhs under the root 
 # Evaluation
 For each set of experiments, we set up a folder as follows. Each folder 
 contains one subfolder, "plots," which contains the generated plots of its corresponding experiment set.
+
+
 Please refer to the following table to compare the generated plots with plots presented in the paper.
 
 | Experiment Set      | Figures|
