@@ -45,7 +45,7 @@ evaluation_project (root directory of the evaluation)
 <ol>
 <li>CGAL (>= 4.11.2)</li>
 <li>  g++ </li>
-<li> maxhs  </li>  *check out the installation instruction and detailed information: http://www.maxhs.org/
+<li> maxhs  (*check out the installation instruction and detailed information: http://www.maxhs.org/) </li> 
 </ol>
 
 ## Compilation
