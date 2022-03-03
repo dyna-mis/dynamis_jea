@@ -1,13 +1,13 @@
 ## JEA_RCR Test
 <ol>
-<li>download the main branch </li>
+<li>download the `main` branch </li>
 <li>change current working directory : cd dynamis_jea </li>
-<li>compile the C++ code in the main branch (see detailed instruction below) </li>
-<li>run experiments: run test.sh (which run experiments on benchmarks in folder INPUT and store results in folder OUTPUT as json files.)</li>
-<li>download the branch dynamis_jea_plots besides the main branch, rename it to dynamis_jea_plots. The structure should be as the following</li>
+<li>compile the C++ code in the `main` branch (see detailed instruction below) </li>
+<li>run experiments: run `test.sh` (which run experiments on benchmarks in folder INPUT and store results in folder OUTPUT as json files.)</li>
+<li>download the branch `dynamis_jea_plots` besides the `main` branch, rename it to `dynamis_jea_plots`. The structure should be as the following</li>
 <li>change current working directory : cd dynamis_jea_plots </li>
-<li> install requirements.txt</li>
-<li>generate plots: run plotting.sh</li>
+<li> install `requirements.txt`</li>
+<li>generate plots: run `plotting.sh`</li>
 <li>compare generated plots with figures in paper (see Evaluation below)</li>
 
 ```
@@ -49,9 +49,9 @@ evaluation_project (root directory of the evaluation)
 </ol>
 
 ## Compilation
-Compile the source with the build/build_auto.sh 
+Compile the source with the `build/build_auto.sh` 
 
-install the maxhs solver and move the generated binary file maxhs under the root directory of this evaluation (see the file structure above)
+install the maxhs solver and move the generated binary file `maxhs` under the root directory of this evaluation (see the file structure above)
 
 
 
@@ -78,8 +78,8 @@ Please refer to the following table to compare the generated plots with plots pr
 **NOTE**
 
 
-The benchmark data files (in the folder INPUT) were generated with the https://github.com/dyna-mis/labeling-instance-generator. 
+The benchmark data files (in the folder `INPUT`) were generated with the https://github.com/dyna-mis/labeling-instance-generator. 
 However, since the four large rectangle files are lost, we generate new files with seed 0. 
-The computed results are slightly different; however, the generated plots (Fig.14) have similar patterns as our paper. 
+The computed results are slightly different; however, the generated plots (Fig.14) should have similar patterns as our paper. 
 
  
