@@ -4,7 +4,7 @@
 <li>change current working directory : cd dynamis_jea </li>
 <li>compile the C++ code in the main branch (see detailed instruction below) </li>
 <li>run experiments: run test.sh (which run experiments on benchmarks in folder INPUT and store results in folder OUTPUT as json files.)</li>
-<li>download the branch dynamis_jea_plots besides the main branch, as the following structure below</li>
+<li>download the branch dynamis_jea_plots besides the main branch, rename it to dynamis_jea_plots. The structure should be as the following</li>
 <li>change current working directory : cd ../dynamis_jea_plots </li>
 <li> install requirements.txt</li>
 <li>generate plots: run plotting.sh</li>
