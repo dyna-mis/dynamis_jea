@@ -11,7 +11,7 @@
 <li>compare generated plots with figures in paper (see Evaluation below)</li>
 
 ```
-evaluation project
+evaluation_project (root directory of the evaluation)
 │     
 │
 └───dynamis_jea 
@@ -21,11 +21,15 @@ evaluation project
 │   └───OUTPUT
 │    
 │   
-└───dynamis_jea_plots
-    │   plotting.sh          
-    │  
-    │
-    └───E*(-Rect)
+└───dynamis_jea_plots    
+|    │   plotting.sh          
+|    │    
+|    │
+|    │
+|    │     
+|    └───E*(-Rect)
+└───maxhs   
+ 
 
 ```  
 
@@ -41,11 +45,12 @@ evaluation project
 <ol>
 <li>CGAL (>= 4.11.2)</li>
 <li>  g++ </li>
-<li> maxhs  </li>  *check the installation instruction and detailed information: http://www.maxhs.org/
+<li> maxhs  </li>  *check out the installation instruction and detailed information: http://www.maxhs.org/
 </ol>
 
 ## Compilation
 Compile the source with the build/build_auto.sh
+intall the maxhs solver and move the generated binary file maxhs under the root directory of this evaluation (see the file structure above)
 
 
 
