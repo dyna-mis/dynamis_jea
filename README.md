@@ -1,11 +1,11 @@
 ## JEA_RCR Test
 <ol>
 <li>download the main branch </li>
-<li>change current working directory : cd dynamis_jea <\li>
+<li>change current working directory : cd dynamis_jea </li>
 <li>install the main code  (see detailed instruction below) </li>
 <li>run experiments: run test.sh (which run experiments on benchmarks in folder INPUT and store results in folder OUTPUT as json files.)</li>
 <li>download the branch dynamis_jea_plots besides the main branch, as the following structure below</li>
-<li>change current working directory : cd ../dynamis_jea_plots <\li>
+<li>change current working directory : cd ../dynamis_jea_plots </li>
 <li> install requirements.txt</li>
 <li>generate plots: run plotting.sh</li>
 <li>compare generated plots with figures in paper (see Evaluation below)</li>
