@@ -51,7 +51,7 @@ evaluation_project (root directory of the evaluation)
 ## Compilation
 Compile the source with the build/build_auto.sh 
 
-intall the maxhs solver and move the generated binary file maxhs under the root directory of this evaluation (see the file structure above)
+install the maxhs solver and move the generated binary file maxhs under the root directory of this evaluation (see the file structure above)
 
 
 
